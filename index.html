@@ -19,22 +19,22 @@
     </nav>
   </header>
 
+  <div class="layout">
+  <aside class="side">
+    <img class="avatar" src="assets/photo.jpg?v=2" alt="Barbara Mu">
+    <div class="side-name">Barbara Mu</div>
+    <div class="side-sub">Baitong Mu</div>
+    <p class="side-desc">MS student in Psychology at Wake Forest University. Attention, memory, and how each shapes the other.</p>
+    <ul class="side-links">
+      <li><a href="#" class="email-link"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span class="email-text">Email</span></a></li>
+      <li><a href="https://github.com/mumizz"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.7.11 2.5.33 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/baitong-mu-816a00259/"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9.75h4v11H3zm6.5 0h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v6.45h-4v-5.72c0-1.36-.02-3.12-1.9-3.12-1.9 0-2.2 1.49-2.2 3.02v5.82h-4z"/></svg>LinkedIn</a></li>
+    </ul>
+  </aside>
   <main>
-    <section class="hero">
-      <img src="assets/photo.jpg?v=2" alt="Barbara Mu">
-      <div>
-        <h1>Barbara Mu</h1>
-        <p class="tagline">Baitong Mu &middot; MS student in Psychology, Wake Forest University</p>
-        <ul class="links">
-          <li><a href="#" id="email">Email</a></li>
-          <li><a href="https://github.com/mumizz">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/baitong-mu-816a00259/">LinkedIn</a></li>
-        </ul>
-      </div>
-    </section>
 
     <section>
-      <h2>About</h2>
+      <h1>About</h1>
       <p>Two people can watch the same scene and come away with different memories of it. The difference begins before memory does, in what each person selected, what they ignored, and the state they were in while looking. Those selections are not made fresh each time. They are tuned by everything the person has seen before. I study this cycle, in which experience shapes attention and attention decides what becomes experience.</p>
       <p>Much of my current work is on the first half. Ignoring looks like doing nothing, but it is something people learn to do, and I want to know what exactly is learned. Does suppressing a distractor require having first been captured by it? Is the learning tied to a particular feature and context, or is it closer to a skill that transfers?</p>
       <p>The second half asks how attention writes memory. What we select determines what is encoded at all, and what we prioritize determines how richly. Because attention is never constant, moment-to-moment fluctuations in attentional state help explain why some experiences last and others fade. I approach this through the evidence people sample with their eyes, the attentional state they are in at encoding, and the boundaries they perceive in ongoing experience.</p>
@@ -106,7 +106,13 @@
         <li><strong>Working-memory network generalization across cognitive domains.</strong> Neuromatch Academy Impact Scholar project with Dr. Raul Rodriguez Cruces, using MLP and GNN-LSTM models on HCP fMRI data (2024&ndash;2025).</li>
       </ul>
     </section>
+
+    <section class="contact">
+      <h2>Get in touch</h2>
+      <p>If any of this overlaps with what you work on, I would be glad to hear from you. The easiest way to reach me is by email at <a href="#" class="email-link"></a>, or through <a href="https://www.linkedin.com/in/baitong-mu-816a00259/">LinkedIn</a>.</p>
+    </section>
   </main>
+  </div>
 
   <footer class="site">
     <span>&copy; 2026 Barbara Mu</span>
@@ -117,8 +123,11 @@
 <script>
   // Assemble the email address at load time to reduce scraper spam.
   (function () {
-    var u = "mub25", d = "wfu.edu", a = document.getElementById("email");
-    if (a) { a.href = "mailto:" + u + "@" + d; a.textContent = u + "@" + d; }
+    var u = "mub25", d = "wfu.edu";
+    document.querySelectorAll(".email-link").forEach(function (a) {
+      a.href = "mailto:" + u + "@" + d;
+      var t = a.querySelector(".email-text"); if (t) t.textContent = u + "@" + d; else a.textContent = u + "@" + d;
+    });
   })();
 </script>
 </body>
