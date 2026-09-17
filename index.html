@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barbara Mu</title>
+  <meta name="description" content="Barbara (Baitong) Mu is an MS student in Psychology at Wake Forest University studying visual attention, working memory, episodic memory, and how attention and memory interact.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site">
+    <a class="brand" href="index.html">Barbara Mu</a>
+    <nav class="site">
+      <a href="index.html" aria-current="page">About</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <!-- Add a photo to assets/photo.jpg and uncomment:
+      <img src="assets/photo.jpg" alt="Barbara Mu">
+      -->
+      <div>
+        <h1>Barbara Mu</h1>
+        <p class="tagline">Baitong Mu &middot; MS student in Psychology, Wake Forest University</p>
+        <ul class="links">
+          <li><a href="#" id="email">Email</a></li>
+          <li><a href="https://github.com/mumizz">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>About</h2>
+      <p>I study visual attention: how attentional priorities are learned from experience, how learned suppression of distractors generalizes across contexts, and how task-relevant information is maintained or transformed in working memory after it has guided selection.</p>
+      <p>I am equally interested in memory and in how attention and memory interact. How do we carve continuous experience into discrete events, and what happens in the brain at event boundaries that determines how well those events are later remembered? How does the attentional state we are in at encoding act as a context that shapes later retrieval? And when we explore an ambiguous scene, how does the evidence we actively sample support recognition and long-term memory? I approach these questions from the view that attention and memory are not separate systems but continuously shape each other.</p>
+      <p>I work with behavioral and eye-tracking experiments, neuroimaging, and computational modeling. At Wake Forest I am advised by Dr. Brad Stilwell and Dr. Anthony Sali. I also collaborate on memory projects with Prof. Roberto Cabeza and Dr. Maxi Becker at Duke University and with Dr. Maureen Ritchey and Dr. Valentina Krenz at UCLA.</p>
+      <p>Before Wake Forest, I completed a BSc (Hons) in Psychology at the University of Edinburgh, where my dissertation with Prof. Andrew Lawrence examined cultural variation in event segmentation and episodic memory.</p>
+    </section>
+
+    <section>
+      <h2>Research interests</h2>
+      <ul class="interests">
+        <li>Visual attention and distractor suppression</li>
+        <li>Visual working memory</li>
+        <li>Episodic memory and event segmentation</li>
+        <li>Attention&ndash;memory interactions</li>
+        <li>Subsequent memory effects and encoding</li>
+        <li>Eye tracking</li>
+        <li>Neuroimaging (fMRI)</li>
+        <li>Computational modeling</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Current research</h2>
+
+      <article class="project">
+        <h3>Learned distractor suppression and attentional templates</h3>
+        <p class="meta">With Dr. Brad Stilwell &middot; Wake Forest University</p>
+        <p>How do people learn to ignore distracting information, and does that learning require first looking at the distractor? Using visual search with eye tracking, I test whether learned suppression depends on initial oculomotor capture and how far it generalizes across visual contexts. Ongoing work uses continuous report and Bayesian mixture modeling to ask how negative attentional templates are held in working memory after guiding search.</p>
+      </article>
+
+      <article class="project">
+        <h3>Attentional states as context for memory</h3>
+        <p class="meta">With Dr. Anthony Sali &middot; Wake Forest University</p>
+        <p>Can an internal attentional state act like a context cue for long-term memory? With attentional shift and hold paradigms, we examine whether matching the attentional state at encoding and retrieval produces context-dependent memory and priming effects.</p>
+      </article>
+
+      <article class="project">
+        <h3>Gaze dynamics and memory for ambiguous images</h3>
+        <p class="meta">With Prof. Roberto Cabeza and Dr. Maxi Becker &middot; Duke University</p>
+        <p>How does actively sampling diagnostic evidence turn perceptual uncertainty into recognition of two-tone (Mooney) images, and does that process shape later memory? I combine human-annotated and model-derived diagnostic regions with fixation dynamics and image-level measures to predict recognition and delayed memory.</p>
+      </article>
+
+      <article class="project">
+        <h3>Posterior medial network and event transitions</h3>
+        <p class="meta">With Dr. Maureen Ritchey and Dr. Valentina Krenz &middot; University of California, Los Angeles</p>
+        <p>Does engagement of the posterior medial network at event boundaries during encoding predict the quality of subsequent memory for multi-feature events? I contribute fMRI quality control and univariate and multivariate subsequent-memory analyses.</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Past projects</h2>
+      <ul class="past">
+        <li><strong>Cultural variation in event segmentation and episodic memory.</strong> Undergraduate dissertation with Prof. Andrew Lawrence, University of Edinburgh (2024&ndash;2025).</li>
+        <li><strong>Working-memory network generalization across cognitive domains.</strong> Neuromatch Academy Impact Scholar project with Dr. Raul Rodriguez Cruces, using MLP and GNN-LSTM models on HCP fMRI data (2024&ndash;2025).</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site">
+    <span>&copy; 2026 Barbara Mu</span>
+    <span>Last updated September 2026</span>
+  </footer>
+
+</div>
+<script>
+  // Assemble the email address at load time to reduce scraper spam.
+  (function () {
+    var u = "mub25", d = "wfu.edu", a = document.getElementById("email");
+    if (a) { a.href = "mailto:" + u + "@" + d; a.textContent = u + "@" + d; }
+  })();
+</script>
+</body>
+</html>
